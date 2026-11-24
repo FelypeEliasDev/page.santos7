@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <rect width="600" height="420" fill="#fff"/>
+  <text x="30" y="38" fill="#000" font-family="monospace" font-size="12" letter-spacing="3">AMANHA JA COMECOU</text>
+  <circle cx="520" cy="340" r="190" fill="none" stroke="#000" stroke-width="3"/>
+  <circle cx="520" cy="340" r="145" fill="none" stroke="#000" stroke-width="2"/>
+  <circle cx="520" cy="340" r="90" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="30" y="300" fill="#000" font-family="Arial, sans-serif" font-size="52" font-weight="700">JOGO</text>
+  <text x="30" y="350" fill="#000" font-family="Arial, sans-serif" font-size="52" font-weight="700">DE GENTE</text>
+  <text x="30" y="400" fill="#000" font-family="Arial, sans-serif" font-size="52" font-weight="700">GRANDE.</text>
+</svg>

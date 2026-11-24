@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101010">
-  <meta name="description" content="Uma casa digital para a paixão alvinegra: histórias, agenda e caminhos para apoiar o Santos.">
-  <title>Santos — A história segue em campo</title>
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Conheça a história do Santos FC, suas conquistas, ídolos, a Vila Belmiro e a paixão alvinegra.">
+  <title>Santos FC — História, conquistas e paixão alvinegra</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
@@ -15,7 +15,7 @@
     <a class="brand" href="#inicio" aria-label="Santos, início"><span class="brand-mark" aria-hidden="true">S</span><span class="brand-name"><strong>SANTOS</strong><small>FUTEBOL &amp; PAIXÃO</small></span></a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu"><i></i><i></i></button>
     <nav id="menu-principal" aria-label="Navegação principal">
-      <a href="#historias">Histórias</a><a href="#jogos">Jogos</a><a href="#torcida">Torcida</a>
+      <a href="#historias">Histórias</a><a href="#linha-do-tempo">Linha do tempo</a><a href="#conquistas">Conquistas</a><a href="#idolos">Ídolos</a><a href="#jogos">Jogos</a><a href="#torcida">Torcida</a>
       <a class="nav-cta" href="https://www.santosfc.com.br/" target="_blank" rel="noopener noreferrer">Visite o clube ↗</a>
     </nav>
   </header>
@@ -29,9 +29,7 @@
         <p class="note">Feito de futebol. Movido por gente.</p>
       </div>
       <div class="art" role="img" aria-label="Composição gráfica abstrata original em preto e branco">
-        <div class="orbit"></div><div class="orbit orbit-two"></div><div class="slab"></div>
-        <div class="art-type">ALVINEGRO<br><small>POR NATUREZA</small></div><div class="art-year">1912</div>
-        <div class="art-caption"><span>01 / 04</span><span>RAÍZES FIRMES. OLHOS NO FUTURO.</span></div>
+        <img src="img/hero.svg" alt="Composição gráfica alvinegra com o número 1912">
       </div>
     </section>
     <div class="ticker" aria-label="Manifesto"><span>Da Vila para o mundo</span><span aria-hidden="true">✳</span><span>Da Vila para o mundo</span><span aria-hidden="true">✳</span><span>Da Vila para o mundo</span></div>
@@ -39,17 +37,49 @@
       <div class="heading"><div><p class="eyebrow">Muito além dos 90 minutos</p><h2 id="stories-title">O que nos <em>move.</em></h2></div><p class="aside">Um clube se conta pelos lugares, pelas pessoas e pelas histórias que continuam vivas.</p></div>
       <div class="cards">
         <a class="card" href="https://www.santosfc.com.br/" target="_blank" rel="noopener noreferrer">
-          <div class="card-art art-vila" aria-hidden="true"><span class="art-label">LUGAR DE ENCONTRO</span><span class="vila-lines"></span><span class="vila-number">VILA<br>1916</span></div>
+          <div class="card-art"><img src="img/vila.svg" alt="Ilustração da Vila em preto e branco"></div>
           <div class="meta"><span>01 / TERRITÓRIO</span><span>↗</span></div><h3>Uma Vila que cabe no mundo</h3><p>Em Santos, o estádio é endereço. Para quem está longe, é sempre um lugar para voltar.</p><span class="read">Conheça o clube ↗</span>
         </a>
         <a class="card" href="https://www.santosfc.com.br/" target="_blank" rel="noopener noreferrer">
-          <div class="card-art art-base" aria-hidden="true"><span class="art-label">AMANHÃ JÁ COMEÇOU</span><span class="base-disc"></span><span class="base-type">JOGO<br>DE GENTE<br>GRANDE.</span></div>
+          <div class="card-art"><img src="img/base.svg" alt="Ilustração abstrata da base em preto e branco"></div>
           <div class="meta"><span>02 / FUTURO</span><span>↗</span></div><h3>Talento que não espera</h3><p>Na base, cada treino abre espaço para um novo capítulo da história alvinegra.</p><span class="read">Descubra mais ↗</span>
         </a>
         <a class="card" href="https://www.santosfc.com.br/" target="_blank" rel="noopener noreferrer">
-          <div class="card-art art-torcida" aria-hidden="true"><span class="art-label">CADA VOZ CONTA</span><span class="torcida-shape">S</span><span class="torcida-type">JUNTOS<br>NO GRITO.</span></div>
+          <div class="card-art"><img src="img/torcida.svg" alt="Ilustração da torcida com a letra S"></div>
           <div class="meta"><span>03 / TORCIDA</span><span>↗</span></div><h3>O Peixe mora em todo lugar</h3><p>Uma camisa, muitas histórias. A arquibancada alvinegra não tem fronteiras.</p><span class="read">Viva essa paixão ↗</span>
         </a>
+      </div>
+    </section>
+    <section class="timeline" id="linha-do-tempo" aria-labelledby="timeline-title">
+      <div class="timeline-inner">
+        <div class="heading"><div><p class="eyebrow">Uma história que atravessa gerações</p><h2 id="timeline-title">O tempo joga<br><em>junto.</em></h2></div><p class="aside">Desde 1912, o Santos constrói uma trajetória marcada por grandes equipes, jogadores inesquecíveis e uma torcida espalhada pelo mundo.</p></div>
+        <ol class="timeline-list">
+          <li><span class="timeline-year">1912</span><div><h3>Nasce o Santos FC</h3><p>O clube é fundado em 14 de abril, na cidade de Santos, litoral de São Paulo.</p></div></li>
+          <li><span class="timeline-year">1916</span><div><h3>A Vila ganha sua casa</h3><p>A Vila Belmiro é inaugurada e passa a ser o endereço de tantas páginas importantes da história santista.</p></div></li>
+          <li><span class="timeline-year">1962–1963</span><div><h3>Conquistas continentais e mundiais</h3><p>Com Pelé e um elenco histórico, o Santos conquista a Libertadores e a Copa Intercontinental em anos consecutivos.</p></div></li>
+          <li><span class="timeline-year">2011</span><div><h3>Uma nova geração no topo</h3><p>O Peixe conquista sua terceira Libertadores, em uma campanha que marcou uma geração de torcedores.</p></div></li>
+        </ol>
+        <p class="history-note">Linha do tempo resumida. Datas e títulos apresentados como referência histórica.</p>
+      </div>
+    </section>
+    <section class="honors wrap" id="conquistas" aria-labelledby="honors-title">
+      <div class="heading"><div><p class="eyebrow">Grandes noites, memória eterna</p><h2 id="honors-title">Conquistas<br>que <em>ecoam.</em></h2></div><p class="aside">Do continente ao mundo, algumas campanhas viraram parte da identidade do Santos e do futebol brasileiro.</p></div>
+      <div class="honor-grid">
+        <article class="honor-card"><span class="honor-index">01 / AMÉRICA</span><strong>3×</strong><h3>Campeão da Libertadores</h3><p>O Santos levantou a taça em 1962, 1963 e 2011. Três campanhas que conectam diferentes gerações de santistas.</p></article>
+        <article class="honor-card"><span class="honor-index">02 / MUNDO</span><strong>2×</strong><h3>Campeão intercontinental</h3><p>Em 1962 e 1963, o clube venceu a Copa Intercontinental e levou o nome do Santos ao topo do futebol mundial.</p></article>
+        <article class="honor-card honor-card-dark"><span class="honor-index">03 / IDENTIDADE</span><strong>∞</strong><h3>Um legado que segue</h3><p>Mais do que taças, o legado aparece no talento revelado, no futebol ofensivo e na paixão que acompanha o Peixe.</p></article>
+      </div>
+    </section>
+    <section class="legends" id="idolos" aria-labelledby="legends-title">
+      <div class="legends-inner">
+        <div class="heading"><div><p class="eyebrow">Camisas que viraram eternas</p><h2 id="legends-title">Ídolos do<br><em>Peixe.</em></h2></div><p class="aside">Cada época tem seus protagonistas. Estes nomes ajudam a contar a grandeza construída dentro e fora de campo.</p></div>
+        <div class="legend-grid">
+          <article class="legend"><span>10</span><h3>Pelé</h3><p>O Rei do Futebol transformou sua passagem pelo Santos em um dos capítulos mais conhecidos da história do esporte.</p></article>
+          <article class="legend"><span>11</span><h3>Pepe</h3><p>Ponta histórico do clube, fez parte de equipes que encantaram o Brasil e o mundo nas décadas de 1950 e 1960.</p></article>
+          <article class="legend"><span>9</span><h3>Coutinho</h3><p>Centroavante de grande talento, formou com Pelé uma das duplas mais marcantes do futebol santista.</p></article>
+          <article class="legend"><span>10</span><h3>Neymar</h3><p>Revelado pelo Santos, liderou uma geração vencedora e ajudou o clube a conquistar a Libertadores de 2011.</p></article>
+        </div>
+        <p class="history-note">Uma seleção breve de nomes históricos — a lista de ídolos do Santos é muito maior.</p>
       </div>
     </section>
     <section class="matches" id="jogos" aria-labelledby="matchday-title">
@@ -61,7 +91,7 @@
       <p class="data-note">* Este portal não exibe calendário ou placares ao vivo; os links levam ao site oficial do clube.</p>
     </section>
     <section class="support wrap" id="torcida" aria-labelledby="support-title">
-      <div class="support-art" aria-hidden="true"><div class="ring"></div><span class="support-letter">S</span></div>
+      <div class="support-art"><img src="img/support.svg" alt="Composição gráfica com círculos e a letra S"></div>
       <div class="support-copy"><p class="eyebrow">A arquibancada é sua</p><h2 id="support-title">A paixão fica<br>maior <em>junto.</em></h2><p>Seja de Santos, de São Paulo ou de qualquer lugar do planeta: tem sempre um jeito de estar perto do Peixe.</p><a class="button button-dark" href="https://www.santosfc.com.br/" target="_blank" rel="noopener noreferrer">Encontre seu jeito de torcer ↗</a><span class="footnote">Informações sobre associação e produtos nos canais oficiais.</span></div>
     </section>
   </main>
