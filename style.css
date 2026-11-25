@@ -36,15 +36,18 @@ h1 span{color:var(--lime)}
 .art-caption{position:absolute;right:0;bottom:0;left:0;padding:16px 19px;display:flex;justify-content:space-between;border-top:1px solid var(--ink);font:8px var(--mono);letter-spacing:.12em}
 .ticker{min-height:64px;padding:15px 4%;display:flex;justify-content:space-around;align-items:center;gap:18px;background:var(--lime);font:600 13px var(--display);letter-spacing:.02em;text-transform:uppercase}
 .wrap{padding-right:10%;padding-left:10%}
-.stories{padding-top:100px;padding-bottom:108px}
+.stories{padding-top:100px;padding-bottom:108px;background:linear-gradient(rgba(255,255,255,.74),rgba(255,255,255,.74)),url("img/stories-background.jpg") center/cover no-repeat}
 .heading{margin-bottom:42px;display:flex;align-items:end;justify-content:space-between;gap:35px}
 .heading .eyebrow{color:var(--ink);margin-bottom:17px}
-.heading h2,.support h2{font-size:clamp(49px,6vw,76px)}.heading h2 em,.support h2 em{color:var(--lime);font-style:normal}
+.heading h2,.support h2{font-size:clamp(49px,6vw,76px)}.heading h2 em,.support h2 em{color:var(--ink);font-style:normal}
 .aside{max-width:315px;margin:0 0 4px;color:var(--ink);font-size:12px;line-height:1.7}
 .cards{display:grid;grid-template-columns:1.16fr 1fr 1fr;gap:21px;align-items:start}
+.photo-credit{margin:20px 0 0;text-align:right;font:8px/1.5 var(--mono)}
+.photo-credit a{color:inherit;text-underline-offset:2px}
 .card{min-width:0;text-decoration:none}.card-art{height:235px;margin-bottom:18px;position:relative;overflow:hidden}
 .card-art>img{width:100%;height:100%;display:block;object-fit:cover}
 .card:first-child .card-art{height:280px}
+.card:nth-child(2) .card-art>img{object-position:center top}
 .art-vila{background:var(--white);border:1px solid var(--ink)}.art-vila:before{content:"";position:absolute;width:62%;height:70%;left:21%;top:21%;border:1px solid var(--lime);border-radius:50% 50% 0 0}
 .vila-lines{position:absolute;bottom:0;left:8%;width:82%;height:63%;border:1px solid var(--ink);border-bottom:0;border-radius:50% 50% 0 0}
 .vila-number{position:absolute;right:12%;top:34%;font:700 38px/.82 var(--display);letter-spacing:-.09em}
