@@ -24,3 +24,23 @@ document.addEventListener("keydown", (event) => {
     menuButton.focus();
   }
 });
+
+const timelineItems = document.querySelectorAll(".tl-item");
+const canHover = window.matchMedia("(hover: hover) and (min-width: 901px)");
+
+const activateItem = (item) => {
+  timelineItems.forEach((el) => {
+    const active = el === item;
+    el.classList.toggle("is-active", active);
+    el.querySelector(".tl-hit").setAttribute("aria-expanded", String(active));
+  });
+};
+
+timelineItems.forEach((item) => {
+  const hit = item.querySelector(".tl-hit");
+  hit.addEventListener("click", () => activateItem(item));
+  hit.addEventListener("focus", () => activateItem(item));
+  item.addEventListener("mouseenter", () => {
+    if (canHover.matches) activateItem(item);
+  });
+});
