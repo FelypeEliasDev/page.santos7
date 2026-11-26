@@ -122,6 +122,9 @@ footer p{font:500 12px var(--display)}footer a{color:var(--lime);font-size:10px}
 .tl-body p{max-width:440px;margin:0;font-size:13px;line-height:1.6}
 .tl-hit{position:absolute;z-index:2;inset:0;width:100%;margin:0;padding:0;border:0;border-radius:inherit;background:transparent;cursor:pointer;opacity:0}
 .tl-hit:focus-visible{opacity:1;outline:3px solid var(--white);outline-offset:-3px}
+.tl-legends .tl-item:nth-child(1) img{object-position:center top}
+.tl-legends .tl-item:nth-child(2) img{object-position:center top}
+.tl-legends .tl-item:nth-child(3) img{object-position:center top}
 @media(max-width:900px){
 .tl{height:auto;flex-direction:column;gap:10px}
 .tl-item{flex:none;height:76px;transition:height .5s cubic-bezier(.2,.7,.2,1)}
