@@ -124,14 +124,122 @@
         <p class="history-note">Uma seleção breve de nomes históricos — a lista de ídolos do Santos é muito maior.</p>
       </div>
     </section>
-    <section class="matches" id="jogos" aria-labelledby="matchday-title">
-      <div class="heading"><div><p class="eyebrow">A emoção tem hora</p><h2 id="matchday-title">Dia de <em>Peixe.</em></h2></div><p class="aside">Agenda e placares podem mudar. Consulte os canais oficiais para informações atualizadas.</p></div>
-      <div class="panels">
-        <article class="panel"><div class="panel-title">PRÓXIMOS JOGOS</div><div class="panel-body"><span class="match-mark" aria-hidden="true">S</span><span class="match-label">AGENDA OFICIAL</span><h3>O próximo encontro<br>começa aqui.</h3><p>Veja datas, horários, adversários e informações de ingressos nos canais do clube.</p><a class="button button-lime" href="https://www.santosfc.com.br/" target="_blank" rel="noopener noreferrer">Consultar agenda ↗</a></div></article>
-        <article class="panel"><div class="panel-title">RESULTADOS</div><div class="panel-body"><div class="result-graphic" aria-hidden="true"><span>S</span><small>90 MIN<br>DE PAIXÃO</small></div><h3>O jogo acaba.<br>A história continua.</h3><p>Confira placares e análises atualizadas direto na cobertura oficial.</p><a class="button button-outline" href="https://www.santosfc.com.br/" target="_blank" rel="noopener noreferrer">Ver cobertura ↗</a></div></article>
+               <section class="matches" id="jogos" aria-labelledby="matchday-title">
+      <div class="heading">
+        <div>
+          <p class="eyebrow">A emoção tem hora</p>
+          <h2 id="matchday-title">Dia de <em>Peixe.</em></h2>
+        </div>
+        <p class="aside">Agenda e placares podem mudar. Consulte os canais oficiais para informações atualizadas.</p>
       </div>
-      <p class="data-note">* Este portal não exibe calendário ou placares ao vivo; os links levam ao site oficial do clube.</p>
+
+      <div class="panels">
+        <!-- ESQUERDA: PRÓXIMO JOGO COM TROCA AUTOMÁTICA -->
+        <article class="panel">
+          <div class="panel-title">PRÓXIMOS JOGOS</div>
+          <div class="panel-body">
+            <span class="match-mark" aria-hidden="true">S</span>
+            <span class="match-label" id="prox-campeonato">BRASILEIRÃO • 37ª RODADA</span>
+            <h3 id="prox-confronto">Vitória × Santos<br>29/11 • 16h00</h3>
+            <p id="prox-desc">Estádio Barradão, Salvador (BA). Confira informações de ingressos e transmissão nos canais oficiais do clube.</p>
+            <a class="button button-lime" href="https://santosfc.com.br" target="_blank" rel="noopener noreferrer">Consultar agenda / Ingressos ↗</a>
+          </div>
+        </article>
+
+        <!-- DIREITA: JOGOS HISTÓRICOS -->
+        <article class="panel">
+          <div class="panel-title">JOGOS HISTÓRICOS</div>
+          <div class="panel-body">
+            <div class="result-graphic" aria-hidden="true">
+              <span>S</span>
+              <small id="hist-meta">MUNDIAL<br>11 OUT 1962</small>
+            </div>
+            <h3 id="hist-titulo">Benfica 2 × 5 Santos.<br>O mundo é alvinegro.</h3>
+            <p id="hist-desc">Com show de Pelé (3 gols) no Estádio da Luz, em Lisboa, o Peixe conquistou seu primeiro título Mundial Interclubes.</p>
+            
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <button type="button" class="button button-lime" onclick="mudarJogoHistorico()" style="cursor: pointer; color: #000000; border: none;">Próximo histórico ↻</button>
+              <a class="button button-outline" href="https://santosfc.com.br" target="_blank" rel="noopener noreferrer">Site oficial ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <p class="data-note">* Este portal exibe dados informativos; os links levam ao site oficial do clube.</p>
+
+      <script>
+        (function() {
+          // 1. AGENDA AUTOMÁTICA POR DATA (Troca sozinho após o horário do jogo)
+          const agendaSantos = [
+            {
+              fimDoJogo: new Date("2026-11-29T18:30:00-03:00"),
+              campeonato: "BRASILEIRÃO • 37ª RODADA",
+              confronto: "Vitória × Santos<br>29/11 • 16h00",
+              desc: "Estádio Barradão, Salvador (BA). Confira informações de ingressos e transmissão nos canais oficiais do clube."
+            },
+            {
+              fimDoJogo: new Date("2026-12-02T23:59:00-03:00"),
+              campeonato: "BRASILEIRÃO • 38ª RODADA",
+              confronto: "Santos × Botafogo<br>02/12 • 21h30",
+              desc: "Vila Belmiro, Santos (SP). Última rodada do Campeonato Brasileiro. Garanta seu ingresso nos canais oficiais."
+            }
+          ];
+
+          function atualizarProximoJogo() {
+            const agora = new Date();
+            const proximo = agendaSantos.find(jogo => agora < jogo.fimDoJogo);
+
+            if (proximo) {
+              document.getElementById("prox-campeonato").innerText = proximo.campeonato;
+              document.getElementById("prox-confronto").innerHTML = proximo.confronto;
+              document.getElementById("prox-desc").innerText = proximo.desc;
+            } else {
+              document.getElementById("prox-campeonato").innerText = "TEMPORADA ENCERRADA";
+              document.getElementById("prox-confronto").innerHTML = "Aguardando calendário<br>da próxima temporada.";
+              document.getElementById("prox-desc").innerText = "Acompanhe a pré-temporada, contratações e a tabela oficial do Paulistão no site do Santos FC.";
+            }
+          }
+
+          atualizarProximoJogo();
+
+          // 2. JOGOS HISTÓRICOS
+          const jogosHistoricos = [
+            {
+              meta: "MUNDIAL<br>11 OUT 1962",
+              titulo: "Benfica 2 × 5 Santos.<br>O mundo é alvinegro.",
+              desc: "Com show de Pelé (3 gols) no Estádio da Luz, em Lisboa, o Peixe conquistou seu primeiro título Mundial Interclubes."
+            },
+            {
+              meta: "MUNDIAL<br>14 NOV 1963",
+              titulo: "Santos 4 × 2 Milan.<br>Virada épica no Maracanã.",
+              desc: "Sem Pelé e Zito, o Santos reverteu um 2 a 0 com gols de Pepe (2), Almir e Lima, forçando o jogo desempate."
+            },
+            {
+              meta: "RIO-SÃO PAULO<br>06 MAR 1958",
+              titulo: "Palmeiras 6 × 7 Santos.<br>O maior clássico da história.",
+              desc: "Partida histórica no Pacaembu com 13 gols, viradas emocionantes e atuação brilhante do ataque santista."
+            },
+            {
+              meta: "LIBERTADORES<br>22 JUN 2011",
+              titulo: "Santos 2 × 1 Peñarol.<br>O Tri da América.",
+              desc: "Com gols de Neymar e Danilo no Pacaembu, o Santos voltou ao topo do continente após 48 anos."
+            }
+          ];
+
+          let indiceHistorico = 0;
+
+          window.mudarJogoHistorico = function() {
+            indiceHistorico = (indiceHistorico + 1) % jogosHistoricos.length;
+            const jogo = jogosHistoricos[indiceHistorico];
+            document.getElementById("hist-meta").innerHTML = jogo.meta;
+            document.getElementById("hist-titulo").innerHTML = jogo.titulo;
+            document.getElementById("hist-desc").innerText = jogo.desc;
+          };
+        })();
+      </script>
     </section>
+
+
     <section class="support wrap" id="torcida" aria-labelledby="support-title">
       <div class="support-art"><img src="img/support.svg" alt="Composição gráfica com círculos e a letra S"></div>
       <div class="support-copy"><p class="eyebrow">A arquibancada é sua</p><h2 id="support-title">A paixão fica<br>maior <em>junto.</em></h2><p>Seja de Santos, de São Paulo ou de qualquer lugar do planeta: tem sempre um jeito de estar perto do Peixe.</p><a class="button button-dark" href="https://www.santosfc.com.br/" target="_blank" rel="noopener noreferrer">Encontre seu jeito de torcer ↗</a><span class="footnote">Informações sobre associação e produtos nos canais oficiais.</span></div>
